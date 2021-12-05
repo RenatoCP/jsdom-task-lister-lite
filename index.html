@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Flatiron Task Lister</title>
   <link rel="stylesheet" href="./style.css">
+
+  <script src = "./src/task.js" defer></script>
+  <script src = "./src/taskLister.js" defer></script>
+  <script src = "./src/index.js" defer></script>
 </head>
 <body>
   <div id="main-content">
@@ -11,7 +15,16 @@
 
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type="text" id="newTaskDescription" name="newTaskDescription" placeholder="description"><br/>
+
+      <label for="new-task-status">Task Status:</label>
+      <select id="newTaskStatus" name="newTaskStatus"></select><br/>
+
+      <label for="new-task-priority">Task Priority:</label>
+      <select id="newTaskPriority" name="newTaskPriority"></select><br/>
+
+      <label for="new-task-due-date">Task Due Date:</label>
+      <input type = "date" id = "newTaskDueDate" name = "newTaskDueDate"/><br/>
       <input type="submit" value="Create New Task">
     </form>
 
@@ -21,7 +34,6 @@
       </ul>
     </div>
 
-    <script src="./src/index.js"></script>
   </div>
 
 </body>
